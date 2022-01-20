@@ -17,7 +17,7 @@
 
 Dt money is a simple and effective alternative to manage your finances, allowing you to register entries, exits and organize them into categories. <br>
 
-##📱 Aplicação: https://dt-money-rho.vercel.app/
+## 📱 Aplicação: https://dt-money-rho.vercel.app/
 
 
 ## 🧬 Technologies
