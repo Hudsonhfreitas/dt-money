@@ -1,11 +1,13 @@
 import { useTransaction } from '../../hooks/useTransactions';
 import { useMediaQuery } from 'react-responsive';
 
+import closeImg from '../../assets/close.svg';
+
 import * as S from './styles';
 
 export function TransactionTable() { 
 
-    const {transactions} = useTransaction();
+    const {transactions, deleteTransaction} = useTransaction();
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 650px)' })
 
     return (
@@ -34,9 +36,13 @@ export function TransactionTable() {
                                     )}
                                 </span>
                             </footer>
+                            <button style={{cursor: 'pointer'}} onClick={() => deleteTransaction(transaction.id)}>
+                                <img src={closeImg}/>
+                            </button>
                         </div>
                     ))}
                 </S.ItemMobile>
+
                 :
 
                 <table>
@@ -63,6 +69,9 @@ export function TransactionTable() {
                                     {new Intl.DateTimeFormat('pt-BR').format(
                                         new Date(transaction.createdAt)
                                     )}
+                                </td>
+                                <td style={{cursor: 'pointer'}} onClick={() => deleteTransaction(transaction.id)}>
+                                    <img src={closeImg}/>
                                 </td>
                             </tr>
                         ))}

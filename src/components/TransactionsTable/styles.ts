@@ -49,6 +49,7 @@ export const ItemMobile = styled.div`
         }
     }
     > div {
+        position: relative;
         background: var(--shape);
         padding: 17px 28px 17px 24px;
         border-radius: 0.25rem;
@@ -81,6 +82,14 @@ export const ItemMobile = styled.div`
             display: flex;
             align-items: center;
             justify-content: space-between;
+        }
+
+        button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: transparent;
+            border:none;
         }
     }
 `
