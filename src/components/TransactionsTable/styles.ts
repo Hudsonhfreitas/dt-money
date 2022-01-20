@@ -21,6 +21,7 @@ export const Container = styled.div`
             background: var(--shape);
             color: var(--text-body);
             border-radius: 0.25rem;
+
             &:first-child {
                 color: var(--text-title);
             }
@@ -30,6 +31,56 @@ export const Container = styled.div`
             &.withdraw {
                 color: var(--red);
             }
+        }
+    }
+
+`
+
+export const ItemMobile = styled.div`
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        color: var(--text-body);
+        h2 {
+            color: var(--text-title);
+            font-weight: 400;
+        }
+    }
+    > div {
+        background: var(--shape);
+        padding: 17px 28px 17px 24px;
+        border-radius: 0.25rem;
+        color: var(--text-body);
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+        h4 {
+            color: var(--text-title);
+            font-weight: 400;
+            font-size: 1.1rem;
+            margin-bottom: 2px;
+        }
+        > span {
+            font-size: 1.4rem;
+            margin-bottom: 19px;
+            display: inline-block;
+            &:first-child {
+                color: var(--text-title);
+            }
+            &.deposit {
+                color: var(--green);
+            }
+            &.withdraw {
+                color: var(--red);
+            }
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 `

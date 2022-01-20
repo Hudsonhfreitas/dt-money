@@ -1,27 +1,22 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: -10rem;
+    margin-top: -10rem;  
 
-    div {
-        background: var(--shape);
-        padding: 1.5rem 2rem;
-        border-radius: 0.25rem;
-        color: var(--text-title);
-        &:last-child {
-            background: var(--green);
-            color: var(--shape);
+    & .slick-list { 
+        margin: 0 -13px; 
+
+        & .slick-slide > div {
+             padding: 0 10px; 
         }
-    }
+    } 
+`
 
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+export const SliderItem = styled.div`
+    background: var(--shape);
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+    color: var(--text-title);   
 
     strong {
         display: block;

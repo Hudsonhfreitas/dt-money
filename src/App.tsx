@@ -4,7 +4,7 @@ import { Dashboard } from "./components/Dashboard";
 
 import { GlobalStyle } from "./styles/global";
 import { NewTransactionModal } from "./components/NewTransactionModal";
-import { TransactionsProvider } from "./TransactionsContext";
+import { TransactionsProvider } from "./hooks/useTransactions";
 
 export function App() {
 
